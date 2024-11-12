@@ -1,0 +1,17 @@
+version: 2
+updates:
+  - package-ecosystem: "maven"
+    directory: "/"              
+    schedule:
+      interval: "daily"
+      time: "02:00"          
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    open-pull-requests-limit: 100
+    labels:
+      - "dependencies"
+      - "automated update"
+    reviewers:
+      - "AndreaDel03"
+    target-branch: "feature/vulnerability"
